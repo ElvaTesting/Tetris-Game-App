@@ -16,6 +16,8 @@ variables:
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
 
+pool: SelfHostedPool
+
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
