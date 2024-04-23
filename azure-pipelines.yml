@@ -16,8 +16,6 @@ variables:
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
 
-pool: SelfHostedPool
-
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
@@ -27,7 +25,7 @@ stages:
   jobs:
   - job: Build
     displayName: Build
-    pool:
+    pool: SelfHostedPool
       vmImage: $(vmImageName)
     steps:
     - task: Docker@2
